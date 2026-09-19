@@ -5,3 +5,4 @@
 - [x] Add portrait and résumé assets
 - [x] Build `/about` page and homepage entry
 - [x] Verify links, layouts, motion, metadata, and preview health
+- [ ] Expand project details using verified résumé content

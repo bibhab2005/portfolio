@@ -54,6 +54,9 @@ const projects = [
     accent: "bg-butter-soft",
     summary:
       "A three-tier expense-splitting app with dual authentication, live expense logging, and a debt engine that simplifies peer-to-peer settlements.",
+    application: "Helps groups record shared expenses, understand balances, and settle debts with fewer peer-to-peer payments.",
+    engineering: "Built with React, Node.js, Express, MongoDB/Mongoose, Passport.js, Google OAuth 2.0, JWT, and bcryptjs across independently deployed services.",
+    proof: "10+ REST endpoints · 4 core modules · automated balance settlement",
   },
   {
     title: "WanderMate",
@@ -62,6 +65,9 @@ const projects = [
     accent: "bg-mint-soft",
     summary:
       "A companion-matching platform using spatial indexing and Jaccard similarity, with structured AI itinerary generation.",
+    application: "Pairs nearby travelers around shared interests and turns their preferences into a practical itinerary.",
+    engineering: "Decoupled React SPA and Django REST API with spatial indexing, Jaccard similarity, Gemini 2.5 Flash, structured JSON, CSRF validation, and strict CORS.",
+    proof: "Dynamic matching · reliable JSON output · secured client/API boundary",
   },
   {
     title: "SkillScan-AI",
@@ -70,6 +76,9 @@ const projects = [
     accent: "bg-sky-soft",
     summary:
       "A résumé analysis platform that runs on local NLP, protects user data, and returns practical skill-gap insights.",
+    application: "Lets candidates identify missing skills without sending résumé data to an external AI provider.",
+    engineering: "MERN architecture with local NLP, tested through Postman across the upload, analysis, and database flow.",
+    proof: "100% local processing · 10+ integration issues resolved",
   },
   {
     title: "TravelLoop AI",
@@ -78,6 +87,9 @@ const projects = [
     accent: "bg-lava-soft",
     summary:
       "An NLP travel engine that extracts destinations, budgets, and dates from natural language and structures them for planning.",
+    application: "Converts an unstructured trip request into reusable, structured travel parameters for itinerary planning.",
+    engineering: "Django and PostgreSQL with a custom spaCy/NLTK pipeline, Gemini integration, retry logic, and rate-limit handling.",
+    proof: "Entity extraction · relational persistence · resilient AI requests",
   },
 ];
 
@@ -231,6 +243,17 @@ function AboutPage() {
                   <span className="grid size-8 shrink-0 place-items-center rounded-full bg-secondary transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"><ArrowUpRight size={16} /></span>
                 </div>
                 <p className="mt-3 max-w-[55ch] text-sm font-semibold leading-relaxed text-muted-foreground">{project.summary}</p>
+                <dl className="mt-5 space-y-3 border-t border-border/70 pt-5 text-sm">
+                  <div>
+                    <dt className="font-display font-bold text-foreground">Application</dt>
+                    <dd className="mt-1 font-semibold leading-relaxed text-muted-foreground">{project.application}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-display font-bold text-foreground">How it works</dt>
+                    <dd className="mt-1 font-semibold leading-relaxed text-muted-foreground">{project.engineering}</dd>
+                  </div>
+                </dl>
+                <p className="mt-5 rounded-xl bg-secondary px-3 py-2 text-xs font-extrabold text-muted-foreground">{project.proof}</p>
               </article>
             ))}
           </div>

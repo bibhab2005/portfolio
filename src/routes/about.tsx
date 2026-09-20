@@ -121,8 +121,8 @@ function AboutPage() {
         <header className="reveal-in flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <a href="#top" className="group flex w-fit items-center gap-3" aria-label="Back to top">
             <span>
-              <span className="block font-display text-2xl font-bold leading-none sm:text-3xl">Bibhab Talukdar</span>
-              <span className="mt-1 block text-xs font-bold text-muted-foreground">Full-Stack Engineer · About</span>
+              <span className="block font-display text-3xl font-extrabold leading-none tracking-tight sm:text-4xl lg:text-5xl">Bibhab Talukdar</span>
+              <span className="mt-1.5 block text-sm font-semibold text-muted-foreground sm:text-base">Full-Stack Engineer · About</span>
             </span>
           </a>
           <nav className="flex flex-wrap gap-2" aria-label="Profile links">

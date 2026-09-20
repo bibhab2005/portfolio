@@ -15,8 +15,8 @@ import {
   Trophy,
 } from "lucide-react";
 
-import portraitAsset from "../assets/bibhab-talukdar-portrait-casual.jpeg.asset.json";
-import resumeAsset from "../assets/bibhab-talulkar-resume.pdf.asset.json";
+// local portrait asset in public/bibhab-talukdar-portrait.jpg
+// local resume asset in public/bibhab-talukdar-resume.pdf
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -44,7 +44,7 @@ const links = {
   github: "https://github.com/bibhab2005",
   linkedin: "https://linkedin.com/in/bibhab",
   email: "mailto:bibhabtalukdar2005@gmail.com",
-  resume: resumeAsset.url,
+  resume: "/bibhab-talukdar-resume.pdf",
 };
 
 const projects = [
@@ -168,7 +168,7 @@ function AboutPage() {
               <div className="relative overflow-hidden rounded-[1.75rem] bg-mint-soft p-2.5 shadow-clay">
                 <div className="relative overflow-hidden rounded-[1.25rem] bg-card">
                   <img
-                    src={portraitAsset.url}
+                    src="/bibhab-talukdar-portrait.jpg"
                     alt="Bibhab Talukdar, full-stack engineer"
                     className="aspect-[4/5] w-full object-cover object-top"
                   />

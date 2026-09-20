@@ -175,8 +175,6 @@ function AboutPage() {
                     alt="Bibhab Talukdar, full-stack engineer"
                     className="aspect-[4/5] w-full object-cover object-top"
                   />
-                  <span className="absolute left-4 top-4 size-5 border-l-2 border-t-2 border-lava-strong" />
-                  <span className="absolute bottom-4 right-4 size-5 border-b-2 border-r-2 border-lava-strong" />
                 </div>
               </div>
               <div className="absolute -bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-card px-4 py-2 text-xs font-extrabold shadow-clay-sm">

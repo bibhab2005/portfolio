@@ -162,20 +162,19 @@ function AboutPage() {
             </div>
           </div>
 
-          <div className="reveal-in reveal-delay-3 mx-auto w-full max-w-sm lg:col-span-4">
+          <div className="reveal-in reveal-delay-3 mx-auto w-full max-w-xs lg:col-span-4">
             <div className="portrait-orbit relative">
               <div className="absolute -inset-5 rounded-[2rem] border border-mint/50" />
               <div className="absolute -inset-9 rounded-[2.5rem] border border-dashed border-sky/50" />
               <span className="orbit-node absolute -right-10 top-1/4 size-4 rounded-full bg-lava shadow-clay-sm" />
               <span className="orbit-node orbit-node-alt absolute -left-8 bottom-1/4 size-3 rounded-full bg-mint shadow-clay-sm" />
-              <div className="relative overflow-hidden rounded-[1.75rem] bg-mint-soft p-3 shadow-clay">
+              <div className="relative overflow-hidden rounded-[1.75rem] bg-mint-soft p-2.5 shadow-clay">
                 <div className="relative overflow-hidden rounded-[1.25rem] bg-card">
                   <img
                     src={portraitAsset.url}
                     alt="Bibhab Talukdar, full-stack engineer"
                     className="aspect-[4/5] w-full object-cover object-top"
                   />
-                  <div className="scan-line pointer-events-none absolute inset-x-0 top-0 h-px bg-mint-strong/70" />
                   <span className="absolute left-4 top-4 size-5 border-l-2 border-t-2 border-lava-strong" />
                   <span className="absolute bottom-4 right-4 size-5 border-b-2 border-r-2 border-lava-strong" />
                 </div>

@@ -255,6 +255,11 @@ function AboutPage() {
                   </div>
                 </dl>
                 <p className="mt-5 rounded-xl bg-secondary px-3 py-2 text-xs font-extrabold text-muted-foreground">{project.proof}</p>
+                {project.url && (
+                  <a href={project.url} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 rounded-full bg-lava px-4 py-2 text-xs font-extrabold text-lava-foreground shadow-clay-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                    <ExternalLink size={14} aria-hidden="true" /> View live demo
+                  </a>
+                )}
               </article>
             ))}
           </div>

@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   Download,
+  ExternalLink,
   Github,
   GraduationCap,
   Linkedin,

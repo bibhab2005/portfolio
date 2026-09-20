@@ -126,7 +126,7 @@ function AboutPage() {
             </span>
           </a>
           <nav className="flex flex-wrap gap-2" aria-label="Profile links">
-            <ProfileLink href={links.resume} icon={Download} label="Résumé" primary download />
+            <ProfileLink href={links.resume} icon={Download} label="Resume" primary download />
             <ProfileLink href={links.github} icon={Github} label="GitHub" external />
             <ProfileLink href={links.linkedin} icon={Linkedin} label="LinkedIn" external />
             <ProfileLink href={links.email} icon={Mail} label="Email" mint />

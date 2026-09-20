@@ -177,9 +177,6 @@ function AboutPage() {
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-7 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-card px-4 py-2 text-xs font-extrabold shadow-clay-sm">
-                <Sparkles size={15} className="text-lava-strong" /> Human signal found
-              </div>
             </div>
           </div>
         </section>

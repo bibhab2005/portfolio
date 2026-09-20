@@ -15,7 +15,7 @@ import {
   Trophy,
 } from "lucide-react";
 
-import portraitAsset from "../assets/bibhab-talulkar-portrait.jpg.asset.json";
+import portraitAsset from "../assets/bibhab-talukdar-portrait-casual.jpeg.asset.json";
 import resumeAsset from "../assets/bibhab-talulkar-resume.pdf.asset.json";
 
 export const Route = createFileRoute("/about")({

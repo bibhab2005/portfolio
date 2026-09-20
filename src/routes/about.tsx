@@ -77,8 +77,8 @@ const projects = [
     stack: "MERN · Local NLP",
     accent: "bg-sky-soft",
     summary:
-      "A résumé analysis platform that runs on local NLP, protects user data, and returns practical skill-gap insights.",
-    application: "Lets candidates identify missing skills without sending résumé data to an external AI provider.",
+      "A resume analysis platform that runs on local NLP, protects user data, and returns practical skill-gap insights.",
+    application: "Lets candidates identify missing skills without sending resume data to an external AI provider.",
     engineering: "MERN architecture with local NLP, tested through Postman across the upload, analysis, and database flow.",
     proof: "100% local processing · 10+ integration issues resolved",
   },
@@ -147,7 +147,7 @@ function AboutPage() {
             </p>
             <div className="reveal-in reveal-delay-4 mt-8 flex flex-wrap gap-3">
               <a href={links.resume} download className="action-primary">
-                <Download size={18} aria-hidden="true" /> Read my résumé
+                <Download size={18} aria-hidden="true" /> Read my resume
               </a>
               <a href="#projects" className="action-secondary">
                 <ArrowDown size={18} aria-hidden="true" /> See my work

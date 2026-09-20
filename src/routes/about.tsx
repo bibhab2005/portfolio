@@ -52,6 +52,7 @@ const projects = [
     category: "Expense technology",
     stack: "MERN · OAuth · Recharts",
     accent: "bg-butter-soft",
+    url: "https://fair-share-sand.vercel.app",
     summary:
       "A three-tier expense-splitting app with dual authentication, live expense logging, and a debt engine that simplifies peer-to-peer settlements.",
     application: "Helps groups record shared expenses, understand balances, and settle debts with fewer peer-to-peer payments.",

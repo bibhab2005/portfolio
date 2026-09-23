@@ -2,8 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowDown,
   ArrowUpRight,
-  BriefcaseBusiness,
-  Download,
   ExternalLink,
   Github,
   GraduationCap,
@@ -16,7 +14,6 @@ import {
 } from "lucide-react";
 
 // local portrait asset in public/bibhab-talukdar-portrait.jpg
-// local resume asset in public/bibhab-talukdar-resume.pdf
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -44,7 +41,6 @@ const links = {
   github: "https://github.com/bibhab2005",
   linkedin: "https://linkedin.com/in/bibhab",
   email: "mailto:bibhabtalukdar2005@gmail.com",
-  resume: "/bibhab-talukdar-resume.pdf",
 };
 
 const projects = [
@@ -126,7 +122,6 @@ function AboutPage() {
             </span>
           </a>
           <nav className="flex flex-wrap gap-2" aria-label="Profile links">
-            <ProfileLink href={links.resume} icon={Download} label="Resume" primary download />
             <ProfileLink href={links.github} icon={Github} label="GitHub" external />
             <ProfileLink href={links.linkedin} icon={Linkedin} label="LinkedIn" external />
             <ProfileLink href={links.email} icon={Mail} label="Email" mint />
@@ -146,10 +141,7 @@ function AboutPage() {
               I’m a final-year IT student who turns ideas into deployed products—connecting thoughtful interfaces, reliable APIs, practical databases, and useful AI features.
             </p>
             <div className="reveal-in reveal-delay-4 mt-8 flex flex-wrap gap-3">
-              <a href={links.resume} download className="action-primary">
-                <Download size={18} aria-hidden="true" /> Read my resume
-              </a>
-              <a href="#projects" className="action-secondary">
+              <a href="#projects" className="action-primary">
                 <ArrowDown size={18} aria-hidden="true" /> See my work
               </a>
             </div>
@@ -199,27 +191,7 @@ function AboutPage() {
           </div>
         </RevealSection>
 
-        <RevealSection className="grid grid-cols-1 gap-4 py-12 lg:grid-cols-12">
-          <article className="rounded-3xl bg-card p-7 shadow-clay lg:col-span-7 sm:p-9">
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-sky-soft px-3 py-1 text-xs font-bold"><BriefcaseBusiness size={14} /> Experience</span>
-              <span className="rounded-full bg-secondary px-3 py-1 text-xs font-bold text-muted-foreground">June–July 2026 · Remote</span>
-            </div>
-            <h2 className="mt-6 font-display text-3xl font-bold">Full-Stack Development Intern</h2>
-            <p className="mt-1 font-bold text-muted-foreground">Navodita Infotech</p>
-            <p className="mt-5 max-w-[60ch] font-semibold leading-relaxed text-muted-foreground">
-              Architected and deployed FairShare across independently hosted frontend and backend services, owning the path from data model and secure authentication to responsive product experience.
-            </p>
-          </article>
-          <aside className="rounded-3xl bg-lava-soft p-7 shadow-clay lg:col-span-5 sm:p-9">
-            <span className="rounded-full bg-lava/70 px-3 py-1 text-xs font-bold">Measured proof</span>
-            <ul className="mt-6 space-y-5 font-bold">
-              <Proof color="bg-lava-strong" value="10+" label="REST API endpoints engineered" />
-              <Proof color="bg-mint-strong" value="4" label="core product modules delivered" />
-              <Proof color="bg-sky-strong" value="3-tier" label="MERN architecture deployed" />
-            </ul>
-          </aside>
-        </RevealSection>
+
 
         <RevealSection id="projects" className="scroll-mt-8 py-8">
           <p className="eyebrow">Selected projects</p>
@@ -296,10 +268,10 @@ function AboutPage() {
   );
 }
 
-function ProfileLink({ href, icon: Icon, label, external = false, download = false, primary = false, mint = false }: { href: string; icon: typeof Mail; label: string; external?: boolean; download?: boolean; primary?: boolean; mint?: boolean }) {
+function ProfileLink({ href, icon: Icon, label, external = false, primary = false, mint = false }: { href: string; icon: typeof Mail; label: string; external?: boolean; primary?: boolean; mint?: boolean }) {
   const tone = primary ? "bg-primary text-primary-foreground" : mint ? "bg-mint text-foreground" : "bg-card text-foreground";
   return (
-    <a href={href} download={download || undefined} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-clay-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${tone}`}>
+    <a href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined} className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold shadow-clay-sm transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring ${tone}`}>
       <Icon size={15} aria-hidden="true" /> {label}
     </a>
   );

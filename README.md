@@ -17,6 +17,7 @@ This repository houses the personal portfolio and engineering showcase for **Bib
 ## Tech Stack
 
 ### Frontend & Routing
+
 - **Framework**: [React 19](https://react.dev/)
 - **Routing & SSR Shell**: [TanStack Router](https://tanstack.com/router) & [TanStack Start](https://tanstack.com/start)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
@@ -25,6 +26,7 @@ This repository houses the personal portfolio and engineering showcase for **Bib
 - **Data & State**: [TanStack Query](https://tanstack.com/query)
 
 ### Tooling & Infrastructure
+
 - **Bundler**: [Vite](https://vite.dev/)
 - **Server Engine**: [Nitro](https://nitro.unjs.io/)
 - **Linting & Formatting**: [ESLint](https://eslint.org/) & [Prettier](https://prettier.io/)
@@ -34,7 +36,9 @@ This repository houses the personal portfolio and engineering showcase for **Bib
 ## Featured Work
 
 ### [FairShare](https://fair-share-sand.vercel.app)
+
 A three-tier expense-splitting application featuring dual authentication (Google OAuth 2.0 & JWT), real-time expense tracking, and an optimized debt engine that minimizes peer-to-peer settlement transactions.
+
 - **Stack**: React, Node.js, Express, MongoDB, Recharts, Passport.js
 
 ---
@@ -42,18 +46,21 @@ A three-tier expense-splitting application featuring dual authentication (Google
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v20+ recommended)
 - npm or your preferred package manager
 
 ### Installation
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/bibhab2005/portfolio.git
    cd portfolio
    ```
 
 2. Install dependencies:
+
    ```sh
    npm install
    ```
@@ -68,13 +75,13 @@ A three-tier expense-splitting application featuring dual authentication (Google
 
 ## Available Scripts
 
-| Script | Command | Description |
-| :--- | :--- | :--- |
-| `dev` | `npm run dev` | Runs the Vite development server |
-| `build` | `npm run build` | Builds the production bundle |
+| Script    | Command           | Description                           |
+| :-------- | :---------------- | :------------------------------------ |
+| `dev`     | `npm run dev`     | Runs the Vite development server      |
+| `build`   | `npm run build`   | Builds the production bundle          |
 | `preview` | `npm run preview` | Previews the production build locally |
-| `lint` | `npm run lint` | Runs ESLint across the codebase |
-| `format` | `npm run format` | Formats files with Prettier |
+| `lint`    | `npm run lint`    | Runs ESLint across the codebase       |
+| `format`  | `npm run format`  | Formats files with Prettier           |
 
 ---
 
@@ -101,4 +108,3 @@ A three-tier expense-splitting application featuring dual authentication (Google
 - **GitHub**: [@bibhab2005](https://github.com/bibhab2005)
 - **LinkedIn**: [Bibhab Talukdar](https://linkedin.com/in/bibhab)
 - **Email**: [bibhabtalukdar2005@gmail.com](mailto:bibhabtalukdar2005@gmail.com)
-

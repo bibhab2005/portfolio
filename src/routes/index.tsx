@@ -9,7 +9,10 @@ export const Route = createFileRoute("/")({
       { title: "Bibhab Talukdar | Portfolio" },
       { name: "description", content: "Portfolio of full-stack engineer Bibhab Talukdar." },
       { property: "og:title", content: "Bibhab Talukdar | Portfolio" },
-      { property: "og:description", content: "Full-stack engineering portfolio and professional profile." },
+      {
+        property: "og:description",
+        content: "Full-stack engineering portfolio and professional profile.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

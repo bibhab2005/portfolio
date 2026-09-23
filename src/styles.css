@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: "Baloo 2", sans-serif;
-  --font-body: "Nunito Sans", sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -163,13 +163,39 @@
 
   body {
     background-color: var(--color-background);
+    background-image:
+      radial-gradient(
+        at 0% 0%,
+        color-mix(in oklab, var(--mint) 8%, transparent) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 0%,
+        color-mix(in oklab, var(--sky) 8%, transparent) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 100% 100%,
+        color-mix(in oklab, var(--lava) 8%, transparent) 0px,
+        transparent 50%
+      ),
+      radial-gradient(
+        at 0% 100%,
+        color-mix(in oklab, var(--butter) 8%, transparent) 0px,
+        transparent 50%
+      );
+    background-attachment: fixed;
     color: var(--color-foreground);
     margin: 0;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
 
-  a { text-decoration: none; }
+  a {
+    text-decoration: none;
+  }
 }
 
 @utility shadow-clay {
@@ -192,8 +218,13 @@
   font-weight: 700;
   box-shadow: 0 18px 30px -18px color-mix(in oklab, var(--foreground) 28%, transparent);
   transition: transform 200ms ease;
-  &:hover { transform: translateY(-3px); }
-  &:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
 }
 
 @utility action-secondary {
@@ -208,8 +239,13 @@
   font-weight: 700;
   box-shadow: 0 10px 18px -12px color-mix(in oklab, var(--foreground) 26%, transparent);
   transition: transform 200ms ease;
-  &:hover { transform: translateY(-3px); }
-  &:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px; }
+  &:hover {
+    transform: translateY(-3px);
+  }
+  &:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
 }
 
 @utility eyebrow {
@@ -232,8 +268,16 @@
   background: var(--card);
   padding: 1.5rem;
   box-shadow: 0 18px 30px -18px color-mix(in oklab, var(--foreground) 28%, transparent);
-  transition: transform 250ms ease, box-shadow 250ms ease;
-  &:hover { transform: translateY(-5px) rotate(-0.4deg); box-shadow: 0 24px 38px -20px color-mix(in oklab, var(--foreground) 34%, transparent); }
+  border: 1px solid transparent;
+  transition:
+    transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+  &:hover {
+    transform: translateY(-5px) scale(1.02) rotate(-0.5deg);
+    box-shadow: 0 24px 40px -15px color-mix(in oklab, var(--primary) 25%, transparent);
+    border-color: color-mix(in oklab, var(--primary) 15%, transparent);
+  }
 }
 
 @utility project-card {
@@ -241,33 +285,137 @@
   background: var(--card);
   padding: 1.75rem;
   box-shadow: 0 18px 30px -18px color-mix(in oklab, var(--foreground) 28%, transparent);
-  transition: transform 250ms ease;
-  &:hover { transform: translateY(-4px); }
+  border: 1px solid transparent;
+  transition:
+    transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+  &:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: 0 24px 40px -15px color-mix(in oklab, var(--primary) 25%, transparent);
+    border-color: color-mix(in oklab, var(--primary) 15%, transparent);
+  }
 }
 
-@keyframes reveal-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes signal-pulse { 0%, 100% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.7); opacity: 1; } }
-@keyframes scan { 0% { transform: translateY(-10px); opacity: 0; } 15% { opacity: 1; } 85% { opacity: 1; } 100% { transform: translateY(410px); opacity: 0; } }
-@keyframes orbit { to { transform: rotate(360deg); } }
-@keyframes orbit-reverse { to { transform: rotate(-360deg); } }
-@keyframes particle { 0%, 100% { transform: translateY(0); opacity: 0.25; } 50% { transform: translateY(-24px); opacity: 0.75; } }
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes signal-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 1;
+  }
+}
+@keyframes scan {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(410px);
+    opacity: 0;
+  }
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orbit-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes particle {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-24px);
+    opacity: 0.75;
+  }
+}
 
-.reveal-in { animation: reveal-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both; }
-.reveal-delay-1 { animation-delay: 100ms; }
-.reveal-delay-2 { animation-delay: 180ms; }
-.reveal-delay-3 { animation-delay: 280ms; }
-.reveal-delay-4 { animation-delay: 380ms; }
-.scroll-reveal { animation: reveal-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both; animation-timeline: view(); animation-range: entry 8% cover 28%; }
-.signal-dot { animation: signal-pulse 2.3s ease-in-out infinite; }
-.scan-line { animation: scan 5s ease-in-out infinite; }
-.signal-arc { animation: orbit 34s linear infinite; }
-.signal-arc-reverse { animation: orbit-reverse 42s linear infinite; }
-.orbit-node { animation: particle 5s ease-in-out infinite; }
-.orbit-node-alt { animation-delay: -2s; }
-.signal-particle { animation: particle 6s ease-in-out infinite; }
+.reveal-in {
+  animation: reveal-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.reveal-delay-1 {
+  animation-delay: 100ms;
+}
+.reveal-delay-2 {
+  animation-delay: 180ms;
+}
+.reveal-delay-3 {
+  animation-delay: 280ms;
+}
+.reveal-delay-4 {
+  animation-delay: 380ms;
+}
+.scroll-reveal {
+  animation: reveal-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 28%;
+}
+.signal-dot {
+  animation: signal-pulse 2.3s ease-in-out infinite;
+}
+.scan-line {
+  animation: scan 5s ease-in-out infinite;
+}
+.signal-arc {
+  animation: orbit 34s linear infinite;
+}
+.signal-arc-reverse {
+  animation: orbit-reverse 42s linear infinite;
+}
+.orbit-node {
+  animation: particle 5s ease-in-out infinite;
+}
+.orbit-node-alt {
+  animation-delay: -2s;
+}
+.signal-particle {
+  animation: particle 6s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal-in, .scroll-reveal, .signal-dot, .scan-line, .signal-arc, .signal-arc-reverse, .orbit-node, .signal-particle { animation: none; }
-  .skill-card, .project-card, .action-primary, .action-secondary { transition: none; }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal-in,
+  .scroll-reveal,
+  .signal-dot,
+  .scan-line,
+  .signal-arc,
+  .signal-arc-reverse,
+  .orbit-node,
+  .signal-particle {
+    animation: none;
+  }
+  .skill-card,
+  .project-card,
+  .action-primary,
+  .action-secondary {
+    transition: none;
+  }
 }

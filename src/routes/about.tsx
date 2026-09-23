@@ -126,21 +126,30 @@ function AboutPage() {
       <CosmicSignals />
       <div className="relative z-10 mx-auto max-w-6xl px-5 py-6 sm:px-8 sm:py-9 lg:px-10">
         <header className="reveal-in sticky top-4 z-50 flex flex-col gap-5 rounded-3xl bg-background/70 px-5 py-4 shadow-clay backdrop-blur-md transition-colors sm:flex-row sm:items-center sm:justify-between">
-          <a href="#top" className="group flex w-fit items-center gap-3" aria-label="Back to top">
-            <span>
-              <span className="block font-display text-3xl font-extrabold leading-none tracking-tight sm:text-4xl lg:text-5xl">
-                Bibhab Talukdar
+          <div className="flex items-center justify-between gap-3">
+            <a href="#top" className="group flex w-fit items-center gap-3" aria-label="Back to top">
+              <span>
+                <span className="block font-display text-3xl font-extrabold leading-none tracking-tight sm:text-4xl lg:text-5xl">
+                  Bibhab Talukdar
+                </span>
+                <span className="mt-1.5 block text-sm font-semibold text-muted-foreground sm:text-base">
+                  Full-Stack Engineer · About
+                </span>
               </span>
-              <span className="mt-1.5 block text-sm font-semibold text-muted-foreground sm:text-base">
-                Full-Stack Engineer · About
-              </span>
-            </span>
-          </a>
+            </a>
+            {/* Theme toggle next to name on mobile only */}
+            <div className="sm:hidden">
+              <ThemeToggle />
+            </div>
+          </div>
           <nav className="flex flex-wrap items-center gap-2" aria-label="Profile links">
             <ProfileLink href={links.github} icon={Github} label="GitHub" external />
             <ProfileLink href={links.linkedin} icon={Linkedin} label="LinkedIn" external />
             <ProfileLink href={links.email} icon={Mail} label="Email" mint />
-            <ThemeToggle />
+            {/* Theme toggle in nav on sm+ screens */}
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
           </nav>
         </header>
 
